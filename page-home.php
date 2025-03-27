@@ -11,21 +11,21 @@
             <section class="services">
                 <h2>Services</h2>
                 <div class="container">
-                    <div class="service-item">
+                    <div class="services-item">
                         <?php
                         if(is_active_sidebar('services-1')){
                             dynamic_sidebar('services-1');
                         } 
                         ?>
                     </div>
-                    <div class="service-item">
+                    <div class="services-item">
                         <?php
                         if(is_active_sidebar('services-2')){
                             dynamic_sidebar('services-2');
                         } 
                         ?>
                     </div>
-                    <div class="service-item">
+                    <div class="services-item">
                         <?php
                         if(is_active_sidebar('services-3')){
                             dynamic_sidebar('services-3');
@@ -51,7 +51,7 @@
                         if($postlist -> have_posts()):
                             while($postlist->have_posts()): $postlist->the_post();
                                 ?>
-                                <article class="latest_news">
+                                <article class="latest-news">
                                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large') ?></a>
                                      <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2>
                                      <div class="meta-info"></a> 
