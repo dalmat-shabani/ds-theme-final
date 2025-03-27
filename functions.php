@@ -79,8 +79,8 @@ function dstheme_sidebars(){
     );
     register_sidebar(
         array(
-            'name' => 'Service-3',
-            'id' => 'service-3',
+            'name' => 'Services-3',
+            'id' => 'services-3',
             'description' => 'Third service area',
             'before_widget' => '<div class = "widget-wrapper">',
             'after_widget' => '</div>',
