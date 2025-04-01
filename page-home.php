@@ -51,8 +51,8 @@
                         if($postlist -> have_posts()):
                             while($postlist->have_posts()): $postlist->the_post();
                                 ?>
-                                <article class="latest-news">
-                                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large') ?></a>
+                                <article class="latest-news"><?php the_permalink(); ?>
+                                    <a href=""><?php the_post_thumbnail('large') ?></a>
                                      <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2>
                                      <div class="meta-info"></a> 
                                        <p>
