@@ -90,5 +90,13 @@ function dstheme_sidebars(){
     );
 } 
 
+function use_costum_single_template($template) {
+    if (is_singular() && has_category('Web Development')) {
+        return get_template_directory() . '/single-costum.php';
+    }
+    return $template;
+}
+add_filter('single_template', 'use_costum_single_template');
+
 
 ?>
