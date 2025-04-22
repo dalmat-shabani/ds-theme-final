@@ -50,23 +50,7 @@
 
                         if($postlist -> have_posts()):
                             while($postlist->have_posts()): $postlist->the_post();
-                                ?>
-                                <article class="latest-news"><?php the_permalink(); ?>
-                                    <a href=""><?php the_post_thumbnail('large') ?></a>
-                                     <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2>
-                                     <div class="meta-info"></a> 
-                                       <p>
-                                          By <span><?php the_author_posts_link(); ?></span>
-                                          Categories <span><?php the_category(' ') ?></span>
-                                          Tags: <?php the_tags('', ', ') ?>
-                                       </p>
-                                       <p><span><?php echo get_the_date(); ?></span></p>
-                                      </div>
-                                      <?php the_excerpt(); ?>
-                                      <?php  ?> 
-                                   <?php the_content(); ?>
-                                </article>
-                                <?php 
+                            get_template_part('parts/content' , 'latest-news');
                             endwhile;
                             wp_reset_postdata();
                         else: ?>
