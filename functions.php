@@ -19,6 +19,11 @@ register_nav_menus(
 
 
 function dstheme_config(){
+
+
+    $textdomain = 'wp-devs' ;
+    load_theme_textdomain( $textdomain, get_template_directory() . '/languages');
+
     register_nav_menus(
         array(
             'wp_devs_main_menu' => 'Main Menu',
@@ -59,9 +64,9 @@ function dstheme_sidebars(){
     );
     register_sidebar(
         array(
-            'name' => 'Service 1',
+            'name' => esc_html__('Service 1', 'wp-devs'),
             'id' => 'services-1',
-            'description' => 'First service area',
+            'description' => esc_html_('First service area'),
             'before_widget' => '<div class = "widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class = "widget-title">',
@@ -70,9 +75,9 @@ function dstheme_sidebars(){
     );
     register_sidebar(
         array(
-            'name' => 'Services-2',
+            'name' => esc_html__('Services-2', 'wp-devs'),
             'id' => 'services-2',
-            'description' => 'Second service area',
+            'description' => esc_html__('Second service area' , 'wp-devs'),
             'before_widget' => '<div class = "widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class = "widget-title">',
@@ -81,9 +86,9 @@ function dstheme_sidebars(){
     );
     register_sidebar(
         array(
-            'name' => 'Services-3',
+            'name' => esc_html__('Services-3','wp-devs'),
             'id' => 'services-3',
-            'description' => 'Third service area',
+            'description' => esc_html_('Third service area', 'wp-devs'),
             'before_widget' => '<div class = "widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class = "widget-title">',
@@ -99,6 +104,8 @@ function use_costum_single_template($template) {
     return $template;
 }
 add_filter('single_template', 'use_costum_single_template');
+
+
 
 
 
